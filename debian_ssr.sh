@@ -70,12 +70,12 @@ pip install --upgrade pip
 pip install cymysql
 cp apiconfig.py userapiconfig.py
 cp config.json user-config.json
-rpl "WEBAPI_URL = 'https://zhaoj.in'" "WEBAPI_URL = 'https://${domain}'" ./userapiconfig.py
-rpl "WEBAPI_TOKEN = 'glzjin'" "WEBAPI_TOKEN = '${mukey}'" ./userapiconfig.py
-rpl "NODE_ID = 1" "NODE_ID = ${nodeid}" ./userapiconfig.py
-rpl "MU_SUFFIX = 'zhaoj.in'" "MU_SUFFIX = 'bing.com'" ./userapiconfig.py
-rpl "SPEEDTEST = 6" "SPEEDTEST = 0" ./userapiconfig.py
-rpl "\"fast_open\": false" "\"fast_open\": true" ./user-config.json
+rpl "WEBAPI_URL = 'https://zhaoj.in'" "WEBAPI_URL = 'https://${domain}'" /root/shadowsocks/userapiconfig.py
+rpl "WEBAPI_TOKEN = 'glzjin'" "WEBAPI_TOKEN = '${mukey}'" /root/shadowsocks/userapiconfig.py
+rpl "NODE_ID = 1" "NODE_ID = ${nodeid}" /root/shadowsocks/userapiconfig.py
+rpl "MU_SUFFIX = 'zhaoj.in'" "MU_SUFFIX = 'bing.com'" /root/shadowsocks/userapiconfig.py
+rpl "SPEEDTEST = 6" "SPEEDTEST = 0" /root/shadowsocks/userapiconfig.py
+rpl "\"fast_open\": false" "\"fast_open\": true" /root/shadowsocks/user-config.json
 
 #Make Supervisor Work
 echo "[program:ssr]
