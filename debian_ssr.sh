@@ -84,6 +84,8 @@ autorestart=true
 autostart=true
 user=root" > /etc/supervisor/conf.d/ssr.conf && /etc/init.d/supervisor restart && supervisorctl restart ssr
 
+echo "ulimit -n 1024000" > /etc/default/supervisor
+
 #VPS Speed Up Settings
 echo "net.core.default_qdisc = fq
 net.ipv4.tcp_congestion_control = bbr
