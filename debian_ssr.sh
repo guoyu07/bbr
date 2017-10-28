@@ -82,7 +82,7 @@ echo "[program:ssr]
 command=python /root/shadowsocks/server.py 
 autorestart=true
 autostart=true
-user=root" > /etc/supervisor/conf.d/ssr.conf && /etc/init.d/supervisor restart && supervisorctl restart ssr
+user=root" > /etc/supervisor/conf.d/ssr.conf
 
 echo "ulimit -n 1024000" > /etc/default/supervisor
 
