@@ -120,4 +120,4 @@ cp /etc/fstab /etc/fstab.bak
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 echo "vm.swappiness = 10" » /etc/sysctl.conf
 
-exit
+reboot
